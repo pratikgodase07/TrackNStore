@@ -1,0 +1,29 @@
+/* Universal settings for a consistent background */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Product Sans, Helvetica, sans-serif;
+    min-height: 100%; /* Ensure body takes full height */
+
+    /*
+       CHOOSE YOUR BACKGROUND STYLE HERE
+       Only one of these options should be active.
+    */
+
+    /* Option 1: Solid Color Background */
+    background-color: #f4f7f6; /* A light grey color */
+
+
+    /* Option 2: Image Background */
+    /*
+    background-image: url('/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This makes the background stay in place when scrolling */
+    */
+}

@@ -1,0 +1,57 @@
+body {
+  font-family: Product Sans, Helvetica, sans-serif;
+  margin-top: 6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto; /* Simplified margin */
+  color: #444;
+}
+
+#container h1 {
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center the main title */
+}
+
+.item {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-around; /* Space out details and image */
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.details {
+  font-size: 1.5rem; /* Adjusted for better readability */
+  display: flex;
+  flex-direction: column; /* Stack details vertically */
+  gap: 1rem; /* Add space between detail lines */
+}
+
+.details p {
+  font-weight: lighter;
+}
+
+.details span {
+  font-weight: bold;
+}
+
+/* REMOVED the problematic absolute positioning for .info */
+.info {
+    color: #555; /* Keep a slightly different color if you like */
+    font-style: italic;
+}
+
+.image img {
+  height: 20rem; /* Adjusted size */
+  border-radius: 5px;
+}

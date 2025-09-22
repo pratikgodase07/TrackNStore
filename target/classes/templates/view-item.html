@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Item</title>
+
+    <!-- Include CSS stylesheets using Thymeleaf expressions -->
+    <link rel="stylesheet" type="text/css" href="/css/view-item.css" th:href="@{/css/view-item.css}" />
+    <link rel="stylesheet" type="text/css" href="/css/nav.css" th:href="@{/css/nav.css}" />
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <nav id="nav">
+        <ul>
+            <li>
+                <a th:href="@{/}">DASHBOARD</a>
+            </li>
+            <li class="selected">
+                <a th:href="@{/item-list}">ITEMS</a>
+            </li>
+            <li>
+                <a th:href="@{/supplier-list}">SUPPLIERS</a>
+            </li>
+            <li>
+                <a th:href="@{/client-list}">CUSTOMERS</a>
+            </li>
+        </ul>
+        <h1>TrackNStore</h1>
+        <div>
+            <a th:href="@{/logout}" class="logOut_btn">Logout</a>
+        </div>
+    </nav>
+    <div id="container" th:object="${item}">
+        <!-- Item Details -->
+        <h1 th:text="${item.itemName}">Item Name</h1>
+<div class="item">
+    <div class="details">
+        <p>Item ID: <span th:text="${item.itemId}">N/A</span></p>
+        <p>Description: <span class="info" th:text="${item.description}">Item information</span></p>
+        <p>Supplier Name: <span th:text="${item.supplier.supplierName}">N/A</span></p>
+                <p>Buy Price: Rs. <span th:text="${#numbers.formatDecimal(item.buyPrice, 0, 'COMMA', 2, 'POINT')}">N/A</span></p>
+                <p>Sell Price: Rs. <span th:text="${#numbers.formatDecimal(item.sellPrice, 0, 'COMMA', 2, 'POINT')}">N/A</span></p>
+                <p>Quantity: <span th:text="${item.quantity}">N/A</span></p>
+            </div>
+            <div class="image">
+                <img th:src="${item.imageUrl}" alt="item picture" />
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        <div>
+            <h3>About</h3>
+            <p>
+                TrackNStore – A smart and reliable Inventory Management System designed to help businesses track,
+                manage, and optimize their stock with ease. From monitoring inventory levels to ensuring seamless
+                storage and retrieval, TrackNStore makes managing your resources simple, efficient, and stress-free.
+            </p>
+        </div>
+        <h2>TrackNStore</h2>
+        <ul>
+            <li><a href="" #>PRIVACY POLICY</a></li>
+            <li><a href="" #>TERMS OF USE</a></li>
+            <li><a href="" #>CONTACT US</a></li>
+            <li><a href="" #>FAQ</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

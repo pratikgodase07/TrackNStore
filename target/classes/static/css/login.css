@@ -1,0 +1,140 @@
+/* Universal settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Product Sans, Helvetica, sans-serif;
+}
+
+/* This is the key fix to make the background cover everything */
+html, body {
+    height: 100%;
+}
+
+body {
+    /*
+       CHOOSE YOUR BACKGROUND HERE
+       Option 1: For a solid color background (like your red example)
+    */
+    background-color: #9A1138; /* You can change this color code */
+
+    /*
+       Option 2: For an image background (like the original)
+       Just uncomment these lines and comment out the background-color line above
+    */
+    /*
+    background-image: url('/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    */
+}
+
+/* Header styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(253, 248, 255, 0.8); /* Slightly transparent */
+    text-align: center;
+    font-weight: lighter;
+    padding: 1rem 0;
+    border-bottom: 1px solid #cecece;
+    z-index: 2;
+}
+
+h1 {
+    font-family: Montserrat, serif;
+    font-size: 1.5rem;
+    color: #22005D;
+    letter-spacing: 2px;
+}
+
+/* This container will center the login form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Form styling */
+.form-container {
+    width: 450px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #ffffff;
+    opacity: 0.98;
+    text-align: center;
+}
+
+h2 {
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    border: none;
+    padding: 0.75rem 3rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #AD9FFF;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #8672FF;
+}
+
+.form-container p {
+    margin-top: 2rem;
+}
+
+/* Alert messages at the bottom */
+.alert-danger, .alert-info {
+    position: fixed; /* Changed from absolute to fixed */
+    bottom: 0;
+    left: 0; /* Ensures it starts from the left edge */
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center text */
+    z-index: 2;
+}
+
+.alert-danger {
+    color: #e00920;
+}
+
+.alert-info {
+    color: #26af3c;
+}
